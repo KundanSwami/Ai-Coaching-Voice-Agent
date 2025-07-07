@@ -7,7 +7,7 @@ import React, { useEffect } from 'react'
 function AuthProvider({childern}) {
 
     const user = useUser();
-    const CreateUser = useMutation(api.user.CreateUser);
+    const CreateUser = useMutation(api.users.CreateUser);
 
     useEffect( () =>{
         console.log(user)
