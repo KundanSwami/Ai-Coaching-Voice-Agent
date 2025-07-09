@@ -24,7 +24,7 @@ export const CreateUser=mutation({
                 ...data
             });
 
-            console.log(result);
+          
             return data;
          }
          return userData[0]

@@ -2,10 +2,9 @@
 import React, { Suspense } from 'react'
 import { ConvexProvider, ConvexReactClient } from "convex/react";
 import AuthProvider from './AuthProvider';
-function Provider({children}) {
- 
-  const convex = new ConvexReactClient(process.env.NEXT_PUBLIC_CONVEX_URL);
- 
+export default function Provider({children}) {
+ const convex = new ConvexReactClient(process.env.NEXT_PUBLIC_CONVEX_URL);
+
   return (
     <Suspense fallback ={<p>loading...</p>}>
          <ConvexProvider client={convex}>
@@ -16,7 +15,7 @@ function Provider({children}) {
           </ConvexProvider>
           
     </Suspense>
-  )
+  );
 }
 
-export default Provider
+
